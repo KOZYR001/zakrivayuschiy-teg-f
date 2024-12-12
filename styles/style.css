@@ -13,4 +13,20 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-size: cover;
+  background-image: var(--bg-gradient);
+  background-color: var(--bg-color, #fff);
+  font-family: var(--font-main, sans-serif);
+  font-variation-settings: "wght" var(--font-weight-subtitle, 400);
+  color: var(font-color, #000);
+  font-size: 18px;
+  background-attachment: fixed;
+  margin: 0 168px;
+  margin-block-start: 100px;
+}
+
+@media (width <= 375px) {
+  .page {
+    margin: 100px 0;
+  }
 }
