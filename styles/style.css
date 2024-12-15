@@ -18,7 +18,7 @@
   background-color: var(--bg-color, #fff);
   font-family: var(--font-main, sans-serif);
   font-variation-settings: "wght" var(--font-weight-subtitle, 400);
-  color: var(font-color, #000);
+  color: var(--font-color, #000);
   font-size: 18px;
   background-attachment: fixed;
   margin: 0 168px;
@@ -29,4 +29,77 @@
   .page {
     margin: 100px 0;
   }
+}
+
+.type-header {
+  margin-block-end: 100px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  padding: 127px 0;
+  font-family: var(--font-accent, fantazy);
+  max-inline-size: 700px;
+  gap: 20px;
+  border: 2px solid #000;
+  background-color: var(--bg-color, #fff);
+  margin-inline: auto;
+}
+
+@media (width <= 375px) {
+  .header {
+    padding: 120px 0;
+  }
+}
+
+.header-title {
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header-subtitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.cards {
+  display: grid;
+  gap: 52px;
+  max-inline-size: 696px;
+  margin-inline: auto;
+}
+
+.section {
+  display: grid;
+  border: 2px solid #000;
+  background-color: #fff;
+  gap: 1px;
+  max-width: 696px;
+  max-height: 1001px;
+}
+
+@media (width <= 375px) {
+  .section {
+    gap: 0;
+  }
+}
+
+.section-title {
+  font-variation-settings: "wght" var(--font-weight-title, 700);
+  font-size: 18px;
+  padding: 6px 10px;
+}
+
+.card-image {
+  display: grid;
+  border: 2px solif #000;
+  position: relative;
+  max-width: 696px;
+  max-height: 696px;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
 }
