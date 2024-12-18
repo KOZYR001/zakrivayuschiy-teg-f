@@ -122,6 +122,14 @@
   }
 }
 
+@supports((text-stroke: 1px var(--font-accent-color, #fff)) or (--webkit-text-stroke: 1px var(--font-accent-color, #fff))) {
+  .label {
+    -webkit-text-stroke: 1px var(--font-accent-color, #fff);
+    text-stroke: 1px var(--font-accent-color, #fff);
+    text-shadow: none;
+  }
+}
+
 .card_type {
   object-fit: cover;
   object-position: center;
@@ -175,10 +183,15 @@
   text-align: center;
   text-transform: inherit;
   transition: box-shadow 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 #000;
 }
 
 .button:after {
@@ -188,10 +201,6 @@
   transition: transform 0.5s ease-in-out;
   transform-origin: left;
   background-color: var(--bg-accent-color, #000);
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 #000;
 }
 
 .button:hover:after {
@@ -206,4 +215,92 @@
   mix-blend-mode: difference;
   color: var(--font-accent-color, #fff);
   position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-button {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+.button-save {
+  display: flex;
+  margin-block-end: 103px;
+  padding: 155px 21px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+@media (width <= 375px) {
+  .button-save {
+    flex-direction:column;
+    margin-block-end: 100px;
+    padding: 15px 20px;
+  }
+}
+
+.icon-save__button {
+  position: relative;
+  width: 21px;
+  color: #fff;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+@media (width <= 375px) {
+  .icon-save__button {
+    width: 28px;
+  }
+}
+
+.dialog {
+  max-width: 355px;
+  border: 2px solid #000;
+  padding: 25px 30px;
+}
+
+.dialog [open] {
+  display: flex;
+}
+
+dialog::backdrop {
+  background-color: #000;
+  opacity: 75%
+}
+
+.content-dialog {
+  gap: 20px;
+  display: flex;
+  justify-items: center;
+}
+
+.floppy-dialog {
+  width:80px;
+}
+
+.text-dialog {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: var(--font-accent, fantazy);
+  text-transform: uppercase;
+}
+
+.button__dialog {
+  border: 2px solid #000;
+  padding: 12px 0;
+  margin-block-start: 30px;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: var(--bg-color, #fff);
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  border: 2px solid #000;
+  background-color: var(--bg-color, #fff);
 }
