@@ -125,7 +125,6 @@
 @supports((text-stroke: 1px var(--font-accent-color, #fff)) or (--webkit-text-stroke: 1px var(--font-accent-color, #fff))) {
   .label {
     -webkit-text-stroke: 1px var(--font-accent-color, #fff);
-    text-stroke: 1px var(--font-accent-color, #fff);
     text-shadow: none;
   }
 }
@@ -228,11 +227,13 @@
 .button-save {
   display: flex;
   margin-block-end: 103px;
-  padding: 155px 21px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 8px;
+  width: 340px;
+  height: 55px;
+  margin: 0 auto;
 }
 
 @media (width <= 375px) {
@@ -303,4 +304,36 @@ dialog::backdrop {
   height: 38px;
   border: 2px solid #000;
   background-color: var(--bg-color, #fff);
+}
+
+.grayscale {
+  filter: grayscale(2);
+}
+
+.sepia {
+  filter: sepia(2);
+}
+
+.brightness {
+  filter: brightness(3);
+}
+
+.contrast {
+  filter: contrast(2);
+}
+
+.saturate {
+  filter: saturate(3)
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.invert {
+  filter: invert(30%);
 }

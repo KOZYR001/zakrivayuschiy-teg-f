@@ -30,7 +30,7 @@
     }
 }
 
-.like-icon .heart .is-liked {
+.like-icon.is-liked .heart {
     animation: hear 0.3s ease-in 0.1s 1 alternate;
 }
 
