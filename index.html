@@ -228,9 +228,10 @@
       <div class = "footer-button">
         <button class = "button-save button"
         onclick="window['dialod'].showModal()"
-        aria-controls="dialog">
+        aria-controls="dialog"
+        type = "button">
           <svg class = "icon-save__button" viewBox = "0 0 39 39">
-            <use href = "svg/floppy.svg"></use>
+            <use href = "./svg/floppy.svg#save-icon"></use>
           </svg>
           <span class = "button__text">Сохранить на&nbsp;память</span>
       </button>
@@ -239,9 +240,9 @@
     <dialog class = "dialog" id = "dialog">
       <div class = "content-dialog">
         <svg class = "floppy-dialog" viewBox = "0 0 39 39">
-          <use href = "svg/floppy.svg"></use>
+          <use href = "./svg/floppy.svg#save-icon"></use>
         </svg>
-        <span class = "text-dialog">Вставьте дискету, чтобы продолжить</span>
+        <p class = "text-dialog">Вставьте дискету, чтобы продолжить</p>
       </div>
       <button class = "button__dialog button" type="sybmit" onclick="window['dialog'].close()">
         <span class = "button__text">ок</span>
