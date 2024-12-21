@@ -16,7 +16,7 @@
   background-size: cover;
   background-image: var(--bg-gradient);
   background-color: var(--bg-color, #fff);
-  font-family: var(--font-main, sans-serif);
+  font-family: var(--font-main, sans-serif), sans-serif;
   font-variation-settings: "wght" var(--font-weight-subtitle, 400);
   color: var(--font-color, #000);
   font-size: 18px;
@@ -41,7 +41,7 @@
   align-items: center;
   justify-self: center;
   padding: 127px 0;
-  font-family: var(--font-accent, fantazy);
+  font-family: var(--font-accent, fantasy);
   max-inline-size: 700px;
   gap: 20px;
   border: 2px solid #000;
@@ -56,14 +56,22 @@
 }
 
 .header-title {
-  font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-weight: var(--font-weight-title, 700);
 }
 
+@media (width <=375px ) {
+  .header-title {
+    font-size: 49px;
+    font-weight: 400;
+  }
+}
+
+
 .header-subtitle {
-  text-transform: uppercase;
-  font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-weight: var(--font-weight-subtitle, 400);
+  text-transform: uppercase;
 }
 
 .card {
@@ -104,13 +112,12 @@
 
 .label {
   position: absolute;
-  font-family: var(--font-accent, fantazy);
+  font-family: var(--font-accent, fantasy);
   font-size: 14px;
   top: 25px;
   right: 25px;
   z-index: 1;
   color: #000;
-  filter: opacity(50%);
   text-shadow: 1px var( --font-accent-color, #fff);
   display: block;
 }
@@ -212,7 +219,7 @@
   font-size: 14px;
   z-index: 9;
   line-height: 12.6px;
-  font-family: var(--font-accent, fantazy);
+  font-family: var(--font-accent, fantasy);
   mix-blend-mode: difference;
   color: var(--font-accent-color, #fff);
   position: relative;
@@ -239,7 +246,7 @@
 @media (width <= 375px) {
   .button-save {
     flex-direction:column;
-    margin-block-end: 100px;
+    margin-block-end: 0;
     padding: 15px 20px;
   }
 }
@@ -264,6 +271,12 @@
   padding: 25px 30px;
 }
 
+@media (width <= 375px) {
+  .dialog {
+    padding: 25px 42px;
+  }
+}
+
 .dialog [open] {
   display: flex;
 }
@@ -286,7 +299,7 @@ dialog::backdrop {
 .text-dialog {
   font-size: 14px;
   line-height: 21px;
-  font-family: var(--font-accent, fantazy);
+  font-family: var(--font-accent, fantasy);
   text-transform: uppercase;
 }
 
