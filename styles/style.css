@@ -183,6 +183,7 @@
   text-transform: inherit;
   transition: box-shadow 0.5s ease-in-out;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .button:focus {
@@ -197,15 +198,14 @@
 .button:after {
   content: "";
   inset: 0;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-  transform-origin: left;
+  transition: translate 0.5s ease-in-out;
+  translate: -100%;
   background-color: var(--bg-accent-color, #000);
   position: absolute;
 }
 
 .button:hover:after {
-  transform: scaleX(1);
+  translate: 0%;
 }
 
 .button__text {
