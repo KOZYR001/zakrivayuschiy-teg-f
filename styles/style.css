@@ -25,7 +25,7 @@
   margin-block-start: 100px;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .page {
     margin: 100px 0;
   }
@@ -49,7 +49,7 @@
   margin-inline: auto;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .header {
     padding: 120px 0;
   }
@@ -60,7 +60,7 @@
   font-weight: var(--font-weight-title, 700);
 }
 
-@media (width <=375px ) {
+@media (width <=600px ) {
   .header-title {
     font-size: 49px;
     font-weight: 400;
@@ -90,7 +90,7 @@
   max-inline-size: 696px;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .section {
     gap: 0;
   }
@@ -102,7 +102,7 @@
   padding: 6px 10px;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .section-title {
     padding: 4px 10px;
   }
@@ -128,7 +128,7 @@
   display: block;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .label {
     top: 23px;
     right: 11px;
@@ -249,7 +249,7 @@
   padding: 15px 21px;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .button-save {
     flex-direction:column;
     margin-block-end: 0;
@@ -265,7 +265,7 @@
   mix-blend-mode: difference;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .icon-save__button {
     width: 28px;
   }
@@ -277,7 +277,7 @@
   padding: 25px 30px;
 }
 
-@media (width <= 375px) {
+@media (width <= 600px) {
   .dialog {
     padding: 25px 42px;
   }
